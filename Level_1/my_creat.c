@@ -1,3 +1,10 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "my_chmod.c"	
 
 // newCreat: Creation of child file happens here.

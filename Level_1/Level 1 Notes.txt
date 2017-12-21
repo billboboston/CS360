@@ -1,3 +1,23 @@
 /***********************************************************************\
 |								LEVEL 1									|
 \***********************************************************************/
+
+MountRoot : mkdir : rmdir : ls : cd : pwd : creat : 
+: link : unlink : symlink : stat : chmod : touch
+
+how these commands work:
+
+> mkdir hello
+> rmdir hello
+> ls
+> ls /hello
+> cd ..
+> pwd
+> creat file1
+> link file1 file2
+> unlink file2
+> symlink file1 file3
+> stat file3
+> chmod file3 766
+> touch file1
+

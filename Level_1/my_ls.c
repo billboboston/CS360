@@ -1,6 +1,11 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include	"my_link.c"
-
-
 
 // ls_file: displays data from the input iNodes
 //	-- a helper function to ls_dir and ls where it will ls a file (or dir but not the contents of dir)

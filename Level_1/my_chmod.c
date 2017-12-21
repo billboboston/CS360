@@ -1,7 +1,13 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "my_cd.c"
 
-
-// change permissions : only takes in the octal number see: < www.onlineconversion.com/html_chmod_calculator.htm >
+// my_chmod: only takes in the octal number see: < www.onlineconversion.com/html_chmod_calculator.htm >
 void my_chmod(char *line) {
 	char *Mode;
 	char *pathname;

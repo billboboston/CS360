@@ -10,10 +10,10 @@ int lb_2_pb(MINODE *mip, int lbk) {
 		return mip->INODE->i_block[lbk];
 	}
 	else if (12 <= lbk < 12 + 256) {	//the logical block was an indirect block
-
+		// we didn't do this :)
 	}
 	else {	//the logical block was a double indirect block
-
+		// we didn't do this :)
 	}
 	printf("[lb_2_pb] Could not determine physical block number, aborting now\n");
 	return -1;
@@ -42,16 +42,16 @@ int my_read(int fd, char *buf, int nbytes) {
 
 	avil = running->fd[fd]->mptr->INODE->i_size - running->fd[fd]->offset;	//compute amout of bytes left in file
 
-																			//read until it has read all of the bytes that the user requested or until the entire file has been read
+	//read until it has read all of the bytes that the user requested or until the entire file has been read
 	while (0 < nbytes || 0 < avil) {
 		lbk = running->fd[fd]->offset / BLKSIZE;		//calculates the logical block
 		startByte = (running->fd[fd]->offset % BLKSIZE);	//calculates the start bit
 
-															//if ((blk = lb_2_pb(running->fd[fd]->mptr->INODE, lbk)) == -1) { return; }	//get physical block number
+		//if ((blk = lb_2_pb(running->fd[fd]->mptr->INODE, lbk)) == -1) { return; }	//get physical block number
 		if ((blk = lb_2_pb(running->fd[fd]->mptr, lbk)) == -1) { return; }
 		get_block(running->fd[fd]->mptr->dev, blk, tmpbuf);		//get the block data of file
 
-																//determine the last byte to be copied from the current block:
+		//determine the last byte to be copied from the current block:
 		if (startByte + nbytes <= BLKSIZE) {
 			endIndex = startByte + nbytes;
 		}

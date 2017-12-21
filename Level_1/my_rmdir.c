@@ -1,3 +1,9 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
 
 #include "my_pwd.c"
 
@@ -42,11 +48,9 @@ int rm_child(MINODE *pmip, char *name) {
 	int rmvDirIdealSize;
 
 	//search for my name in parent directory
-	for (int i = 0; i < 12; i++)
-	{
+	for (int i = 0; i < 12; i++){
 		//only search in non-empty blocks
-		if (pmip->INODE->i_block[i])
-		{
+		if (pmip->INODE->i_block[i]){
 			get_block(pmip->dev, pmip->INODE->i_block[i], buf);		//get the data from the i_block and put it into buf
 
 			dp = (DIR *)buf;	//creating a DIR struct from buf data block

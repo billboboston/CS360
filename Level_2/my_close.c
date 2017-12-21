@@ -1,6 +1,6 @@
 #include "my_cat.c"
 
-
+// my_close: closes a file from an open file descriptor
 int my_close(int fd) {
 	// 1. check fd is a valid opened file descriptor;
 	if (running->fd[fd] == NULL) { printf("Error Closing File: file descriptor\n"); return -1; }

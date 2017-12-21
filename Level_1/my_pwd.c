@@ -1,3 +1,10 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "my_mkdir.c"
 
 // r_pwd: Recursively prints bakc to root from the Working Directory
@@ -49,9 +56,9 @@ void r_pwd(MINODE *wd) {
 	printf("/%s", name);
 }
 
-// pwd: dir checks to call r_pwd
+// my_pwd: dir checks to call r_pwd
 // Input: MINODE of the CWD
-void pwd(MINODE *wd){
+void my_pwd(MINODE *wd){
 	if (wd == root) { printf("/"); }
 	else { r_pwd(wd); }
 	printf("\n");

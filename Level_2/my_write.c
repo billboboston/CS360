@@ -1,7 +1,7 @@
 #include "my_read.c"
 
-// ----------------------------------------- WRITE 
-
+// my_write: reads nbytes from the file that is open under the fd number
+// Input: takes in a filedescriptor, buffer for the text to be placed into, and the number of bytes in the buff
 int my_write(int fd, char *buf, int nbytes) {
 	int count = 0;	//number of bytes read
 	int avil;	//bytes avalible in file

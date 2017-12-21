@@ -1,7 +1,14 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include	"my_touch.c"
 
-// my_unlink:
-// Input:
+// my_unlink: unlinks link between files or removes/deletes a file
+// Input: path of file to remove
 void my_unlink(char *inPath)
 {
 	char *pathname = malloc(strlen(inPath) * sizeof(char));

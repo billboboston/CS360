@@ -1,7 +1,13 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "my_creat.c"
 
-
-//link old_file new_file
+// my_link: link old_file new_file
 void my_Link(char *line) {
 	char *old_file;
 	char *new_file;

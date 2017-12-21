@@ -1,8 +1,5 @@
 # CPTS 360 PROJECT
 
-### SSH acess
-ssh -i "key1.pem" ubuntu@ec2-34-208-208-243.us-west-2.compute.amazonaws.com
-
     Date Assigned: 10-16-2017
 
   1. DUE and DEMO: Wednesday to Thursday in Close Week.

@@ -1,6 +1,6 @@
 #include "../helperFunctions.c"
 
-
+// my_cat: displays the contents of a file from the input file name
 void my_cat(char *filename) {
 	// check given filename
 	if (filename == NULL) { printf("Error: No Filename given\n");	return; }

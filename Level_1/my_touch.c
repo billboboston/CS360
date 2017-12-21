@@ -1,6 +1,13 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include	"my_symlink.c"
 
-// my_touch: updates
+// my_touch: updates a file or dir time
 // Input: 
 void touch(char *pathname) {
 

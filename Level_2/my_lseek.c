@@ -1,6 +1,6 @@
 #include "my_cp.c"
 
-// ----------------------------------------- LSEEK
+// my_lseek: finds/gets a number of bytes from an open fd
 int my_lseek(int fd, int position) {
 
 	if ((running->fd[fd]->mode == 0) && (position > running->fd[fd]->mptr->INODE->i_size)) { return -1; }
@@ -8,6 +8,7 @@ int my_lseek(int fd, int position) {
 	running->fd[fd]->offset = position;
 	return 1;
 }
+
 //syscall handeler for lseek
 void mySys_lseek(char *line) {
 

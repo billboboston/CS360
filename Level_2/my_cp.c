@@ -1,6 +1,6 @@
 #include "my_close.c"
 
-// ----------------------------------------- CP
+// my_cp: copies source to destination using creat
 void my_cp(char *line) {
 	// check if path is dir 			//TODO
 	char *srcPath;
@@ -20,7 +20,7 @@ void my_cp(char *line) {
 	char *destCpy = malloc(strlen(destPath) * sizeof(char));
 	strcpy(destCpy, destPath);
 
-	newCreat(destPath);
+	my_creat(destPath); // creates new empty file at new destination
 	int dest_ino;
 	if ((dest_ino = getino(destCpy)) == 0) { return; }	//return if it couldnt make a new file
 	MINODE *dest_mip = iget(mtable[0].dev, dest_ino);
@@ -29,7 +29,7 @@ void my_cp(char *line) {
 	char buf[BLKSIZE];
 	for (int i = 0; i < 14; i++) {
 		//only search in non-empty blocks
-		if (src_mip->INODE->i_block[i]) {
+		if (src_mip->INODE->i_block[i]) {  // adding previous file data to new file data
 			dest_mip->INODE->i_block[i] = balloc(mtable[0].dev);
 			dest_mip->INODE->i_blocks += 2;
 			get_block(mtable[0].dev, src_mip->INODE->i_block[i], buf);

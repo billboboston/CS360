@@ -1,7 +1,13 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "../helperFunctions.c"
 
-
-//mounts the disk to the root file system and esteblishes / and CWDs
+// Mount_Root: mounts the disk to the root file system and esteblishes / and CWDs
 void Mount_Root(char *device)
 {
 	printf("Starting mount procedure...");

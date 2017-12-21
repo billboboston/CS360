@@ -1,5 +1,11 @@
-#include	"my_stat.c"
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
 
+#include	"my_stat.c"
 
 // my_symlink: creates a symbolic link from one file to another
 // Input: string of the whole input line including the command

@@ -1,7 +1,14 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "Mount_Root.c"
 
-//changes working directory to the inputted pathname, if no pathname is given, will change to root
-void cd(char *pathname){
+// my_cd: changes working directory to the inputted pathname, if no pathname is given, will change to root
+void my_cd(char *pathname){
 	if (pathname == NULL){
 		//there was no pathname included so change directory to root
 		running->cwd = root;

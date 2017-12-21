@@ -1,3 +1,10 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include "my_ls.c"
 
 // enter_child: inserts child (ino) into the correct spot of the parent iNode(pmip)
@@ -134,8 +141,7 @@ void my_mkdir(char *pathname)
 	int pino;
 	MINODE *pmip;
 
-	if (!pathname)
-	{
+	if (!pathname)	{
 		printf("Must include a name\n");
 		return;
 	}
@@ -159,8 +165,7 @@ void my_mkdir(char *pathname)
 
 	//printf("parentDir = %s   child name = %s\n", parentDir, child);
 
-	if ((parentDir == "/") && (child == "/"))
-	{
+	if ((parentDir == "/") && (child == "/"))	{
 		printf("Must include a name\n");
 		return;
 	}

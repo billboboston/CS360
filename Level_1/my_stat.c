@@ -1,9 +1,15 @@
+/* Linux EXT2 file system
+* Semester Project for CS_360 (Fall-17)
+* Professor: KC Wang
+* 
+* Authors: Trent & William
+*/
+
 #include	"my_rmdir.c"
 
 // my_stat: displays the statistics of a dir/file
 // Input: string pathname to the dir/file to stat
-void my_stat(char *pathname)
-{
+void my_stat(char *pathname){
 	int ino;
 	MINODE *mip;
 

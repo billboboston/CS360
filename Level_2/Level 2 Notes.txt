@@ -1,3 +1,16 @@
 /***********************************************************************\
 |								LEVEL 2									|
 \***********************************************************************/
+open : close : read : write : lseek : cat : cp : mv : quit
+
+how these commands work:
+
+> open file1 (0,1,2) {R,W,RW}-- returns a fd #
+> read (fd #)
+> write (fd #) {ENTER} -- prompts user for input text
+> close (fd #)
+> lseek // not actualy sure what this does...
+> cat file1
+> cp file1 hello/file1
+> mv file1 hello/file2
+> quit
